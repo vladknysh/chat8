@@ -78,3 +78,5 @@ gem "pagy", "~> 6.0"
 gem "aws-sdk-s3"
 
 gem "ruby-vips", "~> 2.1"
+
+gem "noticed", "~> 1.6"
