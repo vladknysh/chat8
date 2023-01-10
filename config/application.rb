@@ -24,9 +24,9 @@ module Chat
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.after_initialize do |_config|
-      User.update_all(status: User.statuses[:offline])
-    end
+    # config.after_initialize do |_config|
+    #   User.update_all(status: User.statuses[:offline])
+    # end
 
     # Configuration for the application, engines, and railties goes here.
     #
