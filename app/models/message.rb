@@ -65,7 +65,9 @@ class Message < ApplicationRecord
                                locals: { message: self }
     message_to_remove = Message.where(room: Room.public_rooms).order(created_at: :desc).fifth
 
-    broadcast_remove_to 'public_messages',
-                        target: message_to_remove
+    unless message_to_remove.nil?
+      broadcast_remove_to 'public_messages',
+                          target: message_to_remove
+    end
   end
 end
